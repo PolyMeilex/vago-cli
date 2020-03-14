@@ -41,7 +41,7 @@ impl Db {
         if let Ok(mut file) = std::fs::File::open(&self.path) {
             let mut data = String::new();
 
-            if let Ok(_) = file.read_to_string(&mut data) {
+            if file.read_to_string(&mut data).is_ok() {
                 let toml: Model = toml::from_str(&data).unwrap();
                 self.data = toml;
             }
@@ -52,7 +52,7 @@ impl Db {
 
         let mut file = std::fs::File::create(&self.path).unwrap();
 
-        file.write(toml.as_bytes()).unwrap();
+        file.write_all(toml.as_bytes()).unwrap();
     }
     pub fn add(&mut self, name: Option<String>, path: String) {
         self.data.bookmarks.push(ItemModel { name, path });
@@ -67,17 +67,3 @@ fn home_dir() -> Option<PathBuf> {
         None
     }
 }
-
-// pub fn get_config() {
-//     let config_dir = config_dir();
-
-//     let (toml_str, style_str) = if let Some(config_dir) = config_dir {
-//         let path = config_dir.join(".dirbkm");
-//         let toml_str =
-//             if let Ok(file) = std::fs::read_to_string(&bar_config_dir.join("config.toml")) {
-//                 file
-//             } else {
-//                 default_config.into()
-//             };
-//     };
-// }

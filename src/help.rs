@@ -1,4 +1,4 @@
-pub static help: &'static str = "
+pub static HELP: &str = "
 Linux Directory Bookmarking CLI (dirbkm)
 
 add, -a             Bookmark current dir

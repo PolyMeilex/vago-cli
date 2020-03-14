@@ -34,8 +34,7 @@ fn main() {
             db.write_file();
         }
         cli::Command::Help => {
-            println!("{}", help::help);
-            return;
+            println!("{}", help::HELP);
         }
     }
 }

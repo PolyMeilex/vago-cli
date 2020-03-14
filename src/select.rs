@@ -1,7 +1,7 @@
 use dialoguer::{select, theme::ColorfulTheme};
 
 pub fn run(title: &str, data: &[String]) -> Option<usize> {
-    if data.len() == 0 {
+    if data.is_empty() {
         return None;
     }
     let theme = ColorfulTheme::default();

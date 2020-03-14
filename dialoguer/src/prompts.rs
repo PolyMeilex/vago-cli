@@ -19,7 +19,7 @@ use validate::Validator;
 /// } else {
 ///     println!("nevermind then :(");
 /// }
-/// # Ok(()) } fn main() { test().unwrap(); }
+/// # Ok(()) }
 /// ```
 pub struct Confirmation<'a> {
     text: String,
@@ -38,7 +38,7 @@ pub struct Confirmation<'a> {
 ///
 /// let name = Input::<String>::new().with_prompt("Your name").interact()?;
 /// println!("Name: {}", name);
-/// # Ok(()) } fn main() { test().unwrap(); }
+/// # Ok(()) }
 /// ```
 pub struct Input<'a, T> {
     prompt: String,
@@ -61,7 +61,7 @@ pub struct Input<'a, T> {
 ///     .with_confirmation("Confirm password", "Passwords mismatching")
 ///     .interact()?;
 /// println!("Length of the password is: {}", password.len());
-/// # Ok(()) } fn main() { test().unwrap(); }
+/// # Ok(()) }
 /// ```
 pub struct PasswordInput<'a> {
     prompt: String,
