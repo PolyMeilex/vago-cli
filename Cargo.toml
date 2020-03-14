@@ -1,0 +1,12 @@
+[package]
+name = "dirbkm"
+version = "0.1.0"
+authors = ["Poly <bartek.marynczak@op.pl>"]
+edition = "2018"
+
+[dependencies]
+dialoguer = {path="./dialoguer"}
+
+toml="*"
+serde = "*"
+serde_derive = "*"
