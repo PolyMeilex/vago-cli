@@ -1,7 +1,7 @@
 pkgname="dirbkm-git"
 pkgver=0.0.1
 pkgrel=1
-pkgdesc=""
+pkgdesc="Linux Directory Bookmarking CLI"
 arch=('i686' 'x86_64')
 url="https://github.com/PolyMeilex/dirbkm.git"
 license=('GPL3')
@@ -12,7 +12,7 @@ md5sums=("SKIP")
 
 build() {
     cd "$srcdir/dirbkm"
-    cargo build --release --locked --all-features
+    cargo build --release --locked
 }
 
 package() {

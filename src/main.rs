@@ -1,5 +1,6 @@
 mod cli;
 mod db;
+mod help;
 mod select;
 
 fn main() {
@@ -16,7 +17,7 @@ fn main() {
             }
         }
         cli::Command::Delete => {
-            if let Some(id) = select::run("Forget Dir", &bkm_labels) {
+            if let Some(id) = select::run("Delete Bookmark", &bkm_labels) {
                 if dialoguer::prompts::Confirmation::new()
                     .with_text("Do you want to delete this bookmark?")
                     .interact()
@@ -33,7 +34,7 @@ fn main() {
             db.write_file();
         }
         cli::Command::Help => {
-            println!("Help");
+            println!("{}", help::help);
             return;
         }
     }

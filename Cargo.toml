@@ -5,8 +5,8 @@ authors = ["Poly <bartek.marynczak@op.pl>"]
 edition = "2018"
 
 [dependencies]
-dialoguer = {path="./dialog"}
+dialoguer = {path="./dialoguer"}
 
-toml="*"
-serde = "*"
-serde_derive = "*"
+toml = "0.5.6"
+serde = "1.0.104"
+serde_derive = "1.0.104"

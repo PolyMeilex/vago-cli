@@ -10,7 +10,7 @@ pub struct ItemModel {
 impl ItemModel {
     pub fn as_string(&self) -> String {
         if let Some(name) = &self.name {
-            name.clone() + " " + &self.path
+            name.clone()
         } else {
             self.path.clone()
         }

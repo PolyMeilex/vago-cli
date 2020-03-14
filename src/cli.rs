@@ -8,11 +8,11 @@ pub enum Command {
 pub fn get_command() -> Command {
     if let Some(arg) = std::env::args().nth(1) {
         match arg.as_str() {
-            "add" | "a" => {
+            "add" | "-a" => {
                 let name = std::env::args().nth(2);
                 Command::Add(name)
             }
-            "delete" | "d" => Command::Delete,
+            "delete" | "-d" => Command::Delete,
             _ => Command::Help,
         }
     } else {
