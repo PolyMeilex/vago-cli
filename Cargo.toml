@@ -5,7 +5,7 @@ authors = ["Poly <bartek.marynczak@op.pl>"]
 edition = "2018"
 
 [dependencies]
-dialoguer = {path="./dialoguer"}
+dialoguer = {path="./dialog"}
 
 toml="*"
 serde = "*"
