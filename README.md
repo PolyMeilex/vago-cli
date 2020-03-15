@@ -2,6 +2,9 @@
 Quick and easy way to add bookmarks to your favourite directiories
 ![gif](https://s5.gifyu.com/images/bkm.gif)
 
+# Installation
+On Arch linux you can install it from AUR [dirbkm-git](https://aur.archlinux.org/packages/dirbkm-git)
+
 # Usage
 ```sh
 #Bash,Zsh
