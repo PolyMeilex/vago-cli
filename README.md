@@ -1,4 +1,16 @@
-# dirbkm
-Quick and easy CLI way to add bookmarks to your favourite directiories
+# vago-cli
+Quick and easy CLI way to traverse directiories with fuzzy matching
 
-`master` is a fresh start branch, there used to be older version of this project, now it lives in [old-2020-version](https://github.com/PolyMeilex/dirbkm/tree/old-2020-version) branch
+![image](https://github.com/PolyMeilex/vago-cli/assets/20758186/d180e8da-5786-48ba-bbf3-7a6cbc684fd2)
+
+
+### Example usage with fish
+```fish
+function vago
+  command vago $argv
+  if test $status -eq 200
+    cd (cat /tmp/vago-result)
+  end
+  clear
+end
+```
